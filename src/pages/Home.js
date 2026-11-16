@@ -2,6 +2,7 @@ import { Box } from '@mui/system';
 import SearchExercises from '../components/SearchExercises';
 import Exercises from '../components/Exercises';
 import HeroBanner from '../components/HeroBanner';
+import BmiCalculator from '../components/BmiCalculator';
 import { useState } from 'react';
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
         exercises={exercises}
         bodyPart={bodyPart}
       />
+      <BmiCalculator />
     </Box>
   );
 };

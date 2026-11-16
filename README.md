@@ -1,5 +1,6 @@
 # Fitness Club — Modern Exercise & Workout Application
 
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg?style=for-the-badge&logo=vercel)](https://fitness-zeta-mauve.vercel.app)
 [![React](https://img.shields.io/badge/React-18.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Material UI](https://img.shields.io/badge/Material--UI-v5-007FFF?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/)
@@ -8,7 +9,9 @@
 
 A responsive, feature-packed Fitness & Workout Web Application built with **React 18**, **Material UI 5**, and powered by **RapidAPI** ([ExerciseDB](https://rapidapi.com/justin-WFlarvgFilter/api/exercisedb) and [YouTube Search & Download API](https://rapidapi.com/h0beg909/api/youtube-search-and-download)). 
 
-The application enables fitness enthusiasts to explore over 1,000+ exercises with detailed execution instructions, filter by target muscle groups and gym equipment, watch embedded YouTube video tutorials, and browse similar recommended workouts.
+The application enables fitness enthusiasts to explore over 1,000+ exercises with detailed execution instructions, filter by target muscle groups and gym equipment, calculate Body Mass Index (BMI), watch embedded YouTube video tutorials, and browse similar recommended workouts.
+
+🔗 **Live Demo:** [https://fitness-zeta-mauve.vercel.app](https://fitness-zeta-mauve.vercel.app)
 
 ---
 
@@ -17,10 +20,11 @@ The application enables fitness enthusiasts to explore over 1,000+ exercises wit
 - **🏋️ 1,000+ Exercise Library:** Comprehensive catalog of workouts complete with animated demonstration GIFs, target muscles, and required equipment.
 - **🎯 Muscle & Equipment Filtering:** Categorized horizontal scrolling menu to quickly filter exercises by body parts (Back, Cardio, Chest, Lower Arms, Lower Legs, Neck, Shoulders, Upper Arms, Upper Legs, Waist).
 - **🔍 Instant Search Engine:** Fast search query matching exercise names, body parts, target muscles, or specific equipment.
+- **⚖️ Interactive BMI Calculator:** Built-in tool to compute Body Mass Index with immediate metric categorization (Underweight, Healthy, Overweight, Obese) and fitness advice.
 - **🎬 Integrated Video Tutorials:** Automatically fetches context-aware YouTube workout and form-correction videos for each exercise.
 - **🔄 Similar Workout Recommendations:** Intelligent suggestions for related exercises targeting the same muscle group or utilizing the same equipment.
 - **📄 Responsive Pagination:** Client-side pagination allowing smooth navigation across hundreds of exercise cards.
-- **📱 Fully Responsive Design:** Clean layout built on Material UI Flexbox and Grid systems, optimized for mobile phones, tablets, and desktop displays.
+- **📱 Fully Responsive Design:** Clean layout built on Material UI Flexbox and Grid systems, optimized for mobile phones (320px+), tablets, and desktop displays.
 
 ---
 
@@ -41,12 +45,13 @@ The application enables fitness enthusiasts to explore over 1,000+ exercises wit
 
 ```plaintext
 fitness/
-├── public/                 # HTML templates and public assets
+├── public/                 # HTML templates, SEO meta & custom gym favicons
 ├── src/
 │   ├── assets/             # Icons & background imagery
 │   │   ├── icons/          # Gym, body-part, target icons
 │   │   └── images/         # Hero banners and branding
 │   ├── components/
+│   │   ├── BmiCalculator.js       # Interactive BMI calculator & training pillars
 │   │   ├── BodyPart.js            # Body part category chip card
 │   │   ├── Detail.js              # Detailed exercise overview & muscle badges
 │   │   ├── ExerciseCard.js        # Compact exercise preview card
@@ -56,17 +61,17 @@ fitness/
 │   │   ├── HeroBanner.js          # Engaging hero section with call-to-action
 │   │   ├── HorizontalScrollbar.js # Interactive horizontal scroll menu
 │   │   ├── Loader.js              # Loading spinner component
-│   │   ├── Navbar.js              # Header navigation bar
-│   │   ├── SearchExercises.js     # Search bar & category chips
+│   │   ├── Navbar.js              # Header navigation bar with smooth anchors
+│   │   ├── SearchExercises.js     # Responsive search bar & category chips
 │   │   └── SimilarExercises.js    # Target muscle & equipment recommendations
 │   ├── pages/
 │   │   ├── ExerciseDetail.js      # Complete single exercise watch/guide page
 │   │   └── Home.js                # Main landing page
 │   ├── utils/
 │   │   └── fetchData.js           # Fetch API utility with RapidAPI headers
-│   ├── App.css                    # Custom styles & keyframe animations
-│   ├── App.js                     # Routes & layout definition
-│   └── index.js                   # Application entry point
+│   ├── App.css                    # Responsive styling & elevation transitions
+│   ├── App.js                     # Root layout & route definitions
+│   └── index.js                   # BrowserRouter & React DOM entry
 ├── .env.example            # Environment variables template
 ├── .gitignore              # Ignored files (secures .env and build output)
 ├── package.json            # Project dependencies and scripts
@@ -151,6 +156,7 @@ When deploying to **Vercel**, ensure you configure the environment variable in t
 
 **Ahmed Ragab**
 - GitHub: [@dev-ahmed-ragab](https://github.com/dev-ahmed-ragab)
+- Live Project: [Fitness Club on Vercel](https://fitness-zeta-mauve.vercel.app)
 
 ---
 

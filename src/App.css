@@ -1,6 +1,12 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
-  font-family: 'Josefin Sans';
+  font-family: 'Josefin Sans', sans-serif;
   background-color: #fafbff;
+  overflow-x: hidden;
 }
 
 * {
@@ -50,6 +56,7 @@ body {
 .detail-image {
   width: 729px;
   height: 742px;
+  border-radius: 20px;
 }
 
 .hero-banner-img {
@@ -60,6 +67,7 @@ body {
   border-radius: 0 0 0 50px;
   height: 900px;
   margin-top: -330px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .exercise-card {
@@ -68,6 +76,7 @@ body {
   background: #fff;
   border-top: 4px solid #ff2625;
   border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -75,25 +84,30 @@ body {
   padding-bottom: 10px;
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 .exercise-card img {
   height: 326px;
+  object-fit: cover;
 }
 
 .bodyPart-card {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
 }
 
 .exercise-card:hover,
 .bodyPart-card:hover {
-  transform: scale(1.1, 1.1);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(255, 38, 37, 0.15);
 }
 
 .search-btn:hover {
   color: #ff2625 !important;
   border: 1px solid #ff2625 !important;
+  background-color: #fff !important;
 }
 
 .exercise-video {
@@ -103,6 +117,16 @@ body {
   width: 387px;
   height: 381px;
   text-decoration: none;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.exercise-video:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 1200px) {
@@ -112,7 +136,8 @@ body {
   }
 
   .react-horizontal-scrolling-menu--scroll-container {
-    width: 500px;
+    width: 100% !important;
+    max-width: 700px;
   }
 
   .left-arrow,
@@ -134,8 +159,29 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .detail-image {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+  }
+
+  .exercise-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto;
+  }
+
+  .exercise-video {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .exercise-card {
-    width: 280px;
+    width: 100% !important;
+    max-width: 290px !important;
   }
 }
