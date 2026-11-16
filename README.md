@@ -17,6 +17,8 @@ The application enables fitness enthusiasts to explore over 1,000+ exercises wit
 
 ## ✨ Features
 
+- **⚡ Bespoke Modern Hero Interface:** Redesigned high-impact landing hero with live metric statistics (1,300+ workouts, 10+ target muscle groups, 4K HD guides) and floating biometric indicators.
+- **📋 Curated Training Programs:** Structured workout splits (Push • Pull • Legs, Upper/Lower Power, Full-Body Conditioning, and Mobility & Active Recovery) tailored by fitness experience and weekly frequency.
 - **🏋️ 1,000+ Exercise Library:** Comprehensive catalog of workouts complete with animated demonstration GIFs, target muscles, and required equipment.
 - **🎯 Muscle & Equipment Filtering:** Categorized horizontal scrolling menu to quickly filter exercises by body parts (Back, Cardio, Chest, Lower Arms, Lower Legs, Neck, Shoulders, Upper Arms, Upper Legs, Waist).
 - **🔍 Instant Search Engine:** Fast search query matching exercise names, body parts, target muscles, or specific equipment.
@@ -58,12 +60,13 @@ fitness/
 │   │   ├── Exercises.js           # Paginated grid displaying active exercises
 │   │   ├── ExerciseVideos.js      # Embedded YouTube demonstration videos
 │   │   ├── Footer.js              # Application footer
-│   │   ├── HeroBanner.js          # Engaging hero section with call-to-action
+│   │   ├── HeroBanner.js          # Bespoke hero section with metrics & CTAs
 │   │   ├── HorizontalScrollbar.js # Interactive horizontal scroll menu
 │   │   ├── Loader.js              # Loading spinner component
 │   │   ├── Navbar.js              # Header navigation bar with smooth anchors
 │   │   ├── SearchExercises.js     # Responsive search bar & category chips
-│   │   └── SimilarExercises.js    # Target muscle & equipment recommendations
+│   │   ├── SimilarExercises.js    # Target muscle & equipment recommendations
+│   │   └── WorkoutPrograms.js     # Curated training routines & weekly splits
 │   ├── pages/
 │   │   ├── ExerciseDetail.js      # Complete single exercise watch/guide page
 │   │   └── Home.js                # Main landing page

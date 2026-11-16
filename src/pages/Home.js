@@ -2,6 +2,7 @@ import { Box } from '@mui/system';
 import SearchExercises from '../components/SearchExercises';
 import Exercises from '../components/Exercises';
 import HeroBanner from '../components/HeroBanner';
+import WorkoutPrograms from '../components/WorkoutPrograms';
 import BmiCalculator from '../components/BmiCalculator';
 import { useState } from 'react';
 
@@ -12,6 +13,7 @@ const Home = () => {
   return (
     <Box>
       <HeroBanner />
+      <WorkoutPrograms />
       <SearchExercises
         setBodyPart={setBodyPart}
         setExercises={setExercises}
