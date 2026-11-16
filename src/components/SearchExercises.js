@@ -19,6 +19,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     };
 
     fetchExercisesData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearch = async () => {

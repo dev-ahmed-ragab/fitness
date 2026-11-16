@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# Fitness Club — Modern Exercise & Workout Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Material UI](https://img.shields.io/badge/Material--UI-v5-007FFF?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/)
+[![RapidAPI](https://img.shields.io/badge/RapidAPI-ExerciseDB-0055FF?style=for-the-badge&logo=rapidapi&logoColor=white)](https://rapidapi.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
+A responsive, feature-packed Fitness & Workout Web Application built with **React 18**, **Material UI 5**, and powered by **RapidAPI** ([ExerciseDB](https://rapidapi.com/justin-WFlarvgFilter/api/exercisedb) and [YouTube Search & Download API](https://rapidapi.com/h0beg909/api/youtube-search-and-download)). 
 
-In the project directory, you can run:
+The application enables fitness enthusiasts to explore over 1,000+ exercises with detailed execution instructions, filter by target muscle groups and gym equipment, watch embedded YouTube video tutorials, and browse similar recommended workouts.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **🏋️ 1,000+ Exercise Library:** Comprehensive catalog of workouts complete with animated demonstration GIFs, target muscles, and required equipment.
+- **🎯 Muscle & Equipment Filtering:** Categorized horizontal scrolling menu to quickly filter exercises by body parts (Back, Cardio, Chest, Lower Arms, Lower Legs, Neck, Shoulders, Upper Arms, Upper Legs, Waist).
+- **🔍 Instant Search Engine:** Fast search query matching exercise names, body parts, target muscles, or specific equipment.
+- **🎬 Integrated Video Tutorials:** Automatically fetches context-aware YouTube workout and form-correction videos for each exercise.
+- **🔄 Similar Workout Recommendations:** Intelligent suggestions for related exercises targeting the same muscle group or utilizing the same equipment.
+- **📄 Responsive Pagination:** Client-side pagination allowing smooth navigation across hundreds of exercise cards.
+- **📱 Fully Responsive Design:** Clean layout built on Material UI Flexbox and Grid systems, optimized for mobile phones, tablets, and desktop displays.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+| Domain | Technology / Library | Description |
+| :--- | :--- | :--- |
+| **Frontend Framework** | [React 18](https://reactjs.org/) | Core UI component architecture |
+| **UI Components & Icons** | [Material UI (MUI v5)](https://mui.com/) | Material Design components & styling system |
+| **Routing** | [React Router v6](https://reactrouter.com/) | Client-side routing with clean URL parameters (`/exercise/:id`) |
+| **API Integration** | RapidAPI (ExerciseDB & YouTube API) | Real-time exercise databases and YouTube search integration |
+| **Carousels & Scrolling** | `react-horizontal-scrolling-menu` | Smooth category exploration |
+| **Deployment** | [Vercel](https://vercel.com/) | Continuous integration & cloud hosting |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```plaintext
+fitness/
+├── public/                 # HTML templates and public assets
+├── src/
+│   ├── assets/             # Icons & background imagery
+│   │   ├── icons/          # Gym, body-part, target icons
+│   │   └── images/         # Hero banners and branding
+│   ├── components/
+│   │   ├── BodyPart.js            # Body part category chip card
+│   │   ├── Detail.js              # Detailed exercise overview & muscle badges
+│   │   ├── ExerciseCard.js        # Compact exercise preview card
+│   │   ├── Exercises.js           # Paginated grid displaying active exercises
+│   │   ├── ExerciseVideos.js      # Embedded YouTube demonstration videos
+│   │   ├── Footer.js              # Application footer
+│   │   ├── HeroBanner.js          # Engaging hero section with call-to-action
+│   │   ├── HorizontalScrollbar.js # Interactive horizontal scroll menu
+│   │   ├── Loader.js              # Loading spinner component
+│   │   ├── Navbar.js              # Header navigation bar
+│   │   ├── SearchExercises.js     # Search bar & category chips
+│   │   └── SimilarExercises.js    # Target muscle & equipment recommendations
+│   ├── pages/
+│   │   ├── ExerciseDetail.js      # Complete single exercise watch/guide page
+│   │   └── Home.js                # Main landing page
+│   ├── utils/
+│   │   └── fetchData.js           # Fetch API utility with RapidAPI headers
+│   ├── App.css                    # Custom styles & keyframe animations
+│   ├── App.js                     # Routes & layout definition
+│   └── index.js                   # Application entry point
+├── .env.example            # Environment variables template
+├── .gitignore              # Ignored files (secures .env and build output)
+├── package.json            # Project dependencies and scripts
+├── vercel.json             # Vercel SPA routing rewrite rules
+└── README.md               # Project documentation
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Follow these steps to run the project locally or deploy it to production.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Node.js](https://nodejs.org/) (`v16.0` or higher)
+- `npm` or `yarn`
+- A [RapidAPI](https://rapidapi.com/) account with access to:
+  1. [ExerciseDB API](https://rapidapi.com/justin-WFlarvgFilter/api/exercisedb)
+  2. [YouTube Search and Download API](https://rapidapi.com/h0beg909/api/youtube-search-and-download)
 
-## Learn More
+### 1. Clone the Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/dev-ahmed-ragab/fitness.git
+cd fitness
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. Configure Environment Variables
 
-### Code Splitting
+Create a local `.env` file from `.env.example`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# On Linux / macOS
+cp .env.example .env
 
-### Analyzing the Bundle Size
+# On Windows PowerShell
+copy .env.example .env
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Open `.env` and insert your RapidAPI key:
 
-### Making a Progressive Web App
+```env
+REACT_APP_RAPID_API_KEY=your_actual_rapid_api_key_here
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3. Install Dependencies
 
-### Advanced Configuration
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. Run Development Server
 
-### Deployment
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-### `npm run build` fails to minify
+### 5. Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run build
+```
+
+---
+
+## ☁️ Deploying to Vercel
+
+When deploying to **Vercel**, ensure you configure the environment variable in the Vercel dashboard:
+
+1. Import your `fitness` repository into Vercel.
+2. In the **Configure Project** step, expand **Environment Variables**:
+   - **Key:** `REACT_APP_RAPID_API_KEY`
+   - **Value:** `your_actual_rapid_api_key_here`
+3. Click **Deploy**. The `vercel.json` included in the root handles client-side routing rewrites automatically.
+
+---
+
+## 👨‍💻 Author
+
+**Ahmed Ragab**
+- GitHub: [@dev-ahmed-ragab](https://github.com/dev-ahmed-ragab)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).

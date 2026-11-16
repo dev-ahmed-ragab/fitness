@@ -48,6 +48,7 @@ const ExerciseDetail = () => {
     };
 
     fetchExercisesData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   if (!exerciseDetail) return <div>No Data</div>;
